@@ -1,7 +1,7 @@
 {% load i18n %}
 
-<nav class="navbar navbar-default navbar-fixed-top" bs-navbar>
-    <div class="container-fluid">
+<nav class="navbar navbar-default navbar-fixed-top nav-my" bs-navbar>
+    <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse"
                     data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -49,8 +49,14 @@
             </ul>
 
             <!-- nav right -->
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right topnav-right">
                 {% if user.is_authenticated %}
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                </form>
+
                     <li id="cart-on-nav" class="nav-cart hidden-xs">
 
                     <!-- if item exists in cart - add animated pulse-->

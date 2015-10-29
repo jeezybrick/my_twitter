@@ -30,5 +30,5 @@ urlpatterns = [
         template_name='test.html'
     ), name='test'),
 
-    #url(r'^', include('init.urls')),
+    url(r'^', include('api.urls')),
 ]

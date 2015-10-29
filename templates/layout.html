@@ -65,7 +65,7 @@
 
 </div>
 
-<div class="container-fluid main-content">
+<div class="container main-content">
 
   <div ui-view></div>
 
@@ -119,7 +119,8 @@
       .factory('AuthUser', function() {
         return {
           id: "{{ user.id|default:''}}",
-          username: "{{ user.username|default:''}}"
+          username: "{{ user.username|default:''}}",
+          full_name: "{{ user.full_name|default:''}}"
         }
       });
 </script>

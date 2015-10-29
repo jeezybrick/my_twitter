@@ -41,6 +41,14 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+
+    # my apps
+    'init',
+    'my_auth',
+    'api',
+
+    # 3-p apps
+    'rest_framework',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -105,3 +113,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = ('static', )
+
+# Default auth model
+AUTH_USER_MODEL = 'my_auth.MyUser'
