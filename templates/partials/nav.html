@@ -1,6 +1,6 @@
 {% load i18n %}
 
-<nav class="navbar navbar-default" bs-navbar>
+<nav class="navbar navbar-default navbar-fixed-top" bs-navbar>
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse"
@@ -29,22 +29,19 @@
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav topnav">
                 <li ui-sref-active="active">
                     <a ui-sref="home">{% trans "Home" %}</a>
                 </li>
 
                 <li ui-sref-active="active">
-                    <a ui-sref="shop-list">{% trans "Shops" %}</a>
+                    <a ui-sref="shop-list">{% trans "Notifications" %}</a>
                 </li>
 
                 <li ui-sref-active="active">
-                    <a ui-sref="products-list">{% trans "Items" %}</a>
+                    <a ui-sref="products-list">{% trans "Messages" %}</a>
                 </li>
 
-                <li ui-sref-active="active">
-                    <a ui-sref="categories-list">{% trans "Categories" %}</a>
-                </li>
                 {% if user.is_staff %}
                     <li class="hidden-sm"><a href="/admin/">Admin</a>
                     </li>
